@@ -1,0 +1,13 @@
+version: '3'
+services:
+  gateway.api:
+    build:
+      context: Gateway.Api
+    ports:
+      - "1010:80"
+
+  product.microservice:
+    build:
+      context: Product.Microservice
+    ports:
+      - "7071:80"

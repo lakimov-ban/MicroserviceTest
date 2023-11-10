@@ -1,17 +1,17 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7244"
+    "BaseUrl": "http://localhost:1010"
   },
   "Routes": [
     {
       "UpstreamPathTemplate": "/g/product",
       "UpstreamHttpMethod": ["GET"],
       
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7071
+          "Host": "host.docker.internal",
+          "Port": 2020
         }
       ],
       "DownstreamPathTemplate": "/api/product"
@@ -20,11 +20,11 @@
       "UpstreamPathTemplate": "/g/product/{id}",
       "UpstreamHttpMethod": ["GET"],
 
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7071
+          "Host": "host.docker.internal",
+          "Port": 2020
         }
       ],
       "DownstreamPathTemplate": "/api/product/{id}"
