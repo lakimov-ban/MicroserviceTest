@@ -10,4 +10,4 @@ services:
     build:
       context: Product.Microservice
     ports:
-      - "7071:80"
+      - "2020:80"
