@@ -28,6 +28,32 @@
         }
       ],
       "DownstreamPathTemplate": "/api/product/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/f/image/upload",
+      "UpstreamHttpMethod": ["POST"],
+
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/Image/upload",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 2022
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/f/image/{id}",
+      "DownstreamPathTemplate": "/api/Image/{id}",
+      "UpstreamHttpMethod": ["GET"],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 2022
+        }
+      ]
     }
   ]
 }

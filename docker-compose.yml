@@ -11,3 +11,9 @@ services:
       context: Product.Microservice
     ports:
       - "2020:80"
+        
+  file-manager.microservice:
+    build:
+      context: FileManager.Microservice
+    ports:
+      - "2022:80"

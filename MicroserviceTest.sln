@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Microservice", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Api", "Gateway.Api\Gateway.Api.csproj", "{CACA6C92-77AC-4C85-B7F2-77471D9E03F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager.Microservice", "FileManager.Microservice\FileManager.Microservice.csproj", "{1815206E-2484-4C92-B4C3-2CF363E6BD39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CACA6C92-77AC-4C85-B7F2-77471D9E03F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CACA6C92-77AC-4C85-B7F2-77471D9E03F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CACA6C92-77AC-4C85-B7F2-77471D9E03F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1815206E-2484-4C92-B4C3-2CF363E6BD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1815206E-2484-4C92-B4C3-2CF363E6BD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1815206E-2484-4C92-B4C3-2CF363E6BD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1815206E-2484-4C92-B4C3-2CF363E6BD39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
