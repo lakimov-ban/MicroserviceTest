@@ -17,3 +17,8 @@ services:
       context: FileManager.Microservice
     ports:
       - "2022:80"
+    volumes:
+      - image-volume:/app/images
+        
+volumes:
+  image-volume:

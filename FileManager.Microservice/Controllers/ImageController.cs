@@ -7,9 +7,15 @@ namespace FileManager.Microservice.Controllers;
 public class ImageController : ControllerBase
 {
     private readonly string _imagesDirectory = "/app/images";
+    private readonly IWebHostEnvironment _hostingEnvironment;
+
+    public ImageController(IWebHostEnvironment hostingEnvironment)
+    {
+       _hostingEnvironment = hostingEnvironment;
+    }
 
     [HttpPost("upload")]
-    public async Task<IActionResult> UploadImage([FromForm] IFormFile file)
+    public async Task<IActionResult> UploadImage([FromForm] IFormFile? file)
     {
         if (file == null || file.Length == 0)
         {
@@ -18,11 +24,13 @@ public class ImageController : ControllerBase
 
         try
         {
-            string imageId = Guid.NewGuid().ToString();
+            var imageId = Guid.NewGuid().ToString();
 
-            string filePath = Path.Combine(_imagesDirectory, $"{imageId}.jpg");
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            var filePath = Path.Combine(_imagesDirectory, $"{imageId}.jpg");
+            Console.WriteLine(filePath);
+            var absolutePath = Path.Combine(_hostingEnvironment.ContentRootPath, filePath);
+            Console.WriteLine(absolutePath);
+            await using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
